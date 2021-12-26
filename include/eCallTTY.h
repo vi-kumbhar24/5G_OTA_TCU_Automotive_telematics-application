@@ -1,0 +1,8 @@
+#define ECALL_PASS		0
+#define ECALL_FAIL		1
+#define ECALL_NO_GPS_POSITION	2
+#define ECALL_HANGUP		3
+#define ECALL_BUSY		4
+#define ECALL_OPEN_SERIAL	5
+#define ECALL_SERIAL		6
+#define ECALL_NO_VOICE		7

@@ -1,0 +1,230 @@
+/******************************************************************************
+ * File: autonet_files.h
+ *
+ * Definitions of all changing files
+ ******************************************************************************
+ * Change log:
+ * 2012/08/17 rwp
+ *    Added LastGpsAntStateFile
+ * 2012/08/27 rwp
+ *    Added DebugSatellitesFile
+ * 2012/09/12 rwp
+ *    Added WokeOnCanFile
+ * 2012/09/22 rwp
+ *    Added DegugMovingFile
+ * 2014/03/17 rwp
+ *    Added DemoModeFile
+ * 2014/04/01 rwp
+ *    Added UpdateFilesTimeFile
+ * 2014/11/12 rwp
+ *    Added RapidAccCountFile and RapidDecCountFile
+ * 2015/01/17 rwp
+ *    Added ShutdownFile
+ * 2015/02/16 rwp
+ *    Added WhitelistFile
+ * 2015/03/27 rwp
+ *    Added NoCanFile
+ * 2015/04/01 rwp
+ *    Added WifiPasswdFile
+ * 2015/04/12 rwp
+ *    Added EcusFile and BatteryValFile
+ * 2015/04/25 rwp
+ *    Added EcusChangeFile
+ * 2015/06/18 rwp
+ *    Added VinToModelDir, etc
+ * 2015/06/22 rwp
+ *    Added FaultsFile
+ * 2015/06/26 rwp
+ *    Added TimezoneOffsetFile
+ * 2015/07/01 rwp
+ *    Added DownloadedEcusFile and DeliveredEcusExtFile
+ * 2015/07/14 rwp
+ *    Added OtaDownloadWaitingFile and OtaInstallWaitingFile
+ * 2015/08/06 rwp
+ *    Added SshControlFile
+ * 2019/02/07 rwp
+ *    Added BuildVarsFile
+ ******************************************************************************
+ */
+
+#ifndef AUTONET_FILES_H
+#define AUTONET_FILES_H
+
+#define CellularKeepupFile "/etc/autonet/admin/cellular_keepup"
+#define CellularTestingFile "/etc/autonet/admin/cellular_testing"
+#define PermStateFile "/etc/autonet/admin/current_state"
+#define DebugMovingFile "/etc/autonet/admin/debug_moving"
+#define DebugPositionFile "/etc/autonet/admin/debug_position"
+#define DebugSatellitesFile "/etc/autonet/admin/debug_satellites"
+#define DemoModeFile "/etc/autonet/admin/demo_mode"
+#define DisableFile "/etc/autonet/admin/disable"
+#define KeepOnFile "/etc/autonet/admin/keep_on"
+#define NoCanFile "/etc/autonet/admin/no_can"
+#define NoGpsResetFile "/etc/autonet/admin/no_gps_reset"
+#define CarStateFile "/etc/autonet/admin/car_state"
+#define EcusFile "/etc/autonet/admin/ota/ecus.deployed"
+#define EcusChangeFile "/etc/autonet/admin/ecus_changed"
+#define Eth0DownFile "/etc/autonet/admin/eth0_down"
+#define EventLogFile "/etc/autonet/admin/events"
+#define FaultsFile "/etc/autonet/admin/faults"
+#define FirstReactivateFile "/etc/autonet/admin/first_reactivate"
+#define FleetQueueFile "/etc/autonet/admin/fleet_queue"
+#define HardwareFailureFile "/etc/autonet/admin/hard_failure"
+#define LastEcallFile "/etc/autonet/admin/last_ecall"
+#define LowFuelFile "/etc/autonet/admin/low_fuel"
+#define LastAgpsTimeFile "/etc/autonet/admin/last_agps_time"
+#define LastCellModel "/etc/autonet/admin/last_cell_model"
+#define LastDefaultSitesUpdateFile "/etc/autonet/admin/last_default_sites_update"
+#define LastOmaDmTimeFile "/etc/autonet/admin/last_oma_dm_time"
+#define DownloadedEcusFile "/etc/autonet/admin/ota/ecus.download"
+#define DeliveredEcusExtFile "/etc/autonet/admin/ota/ecus.delivered.ext"
+#define PowerOffStateFile "/etc/autonet/admin/poweroff_state"
+#define PreviousPositionFile "/etc/autonet/admin/previous_position"
+#define RsyncLogFile "/etc/autonet/admin/rsync.log"
+#define RunOmadmClientFile "/etc/autonet/admin/run_omadm_client"
+#define SecondaryConnectedFile "/etc/autonet/admin/secondary_connected"
+#define ServerIdxFile "/etc/autonet/admin/server_idx"
+#define SshControlFile "/etc/autonet/admin/ssh"
+#define SyncStatusFile "/etc/autonet/admin/sync_status"
+#define TestDowLoggerFile "/etc/autonet/admin/test_dow_logger"
+#define TimezoneOffsetFile "/etc/autonet/admin/timezone_offset"
+#define UpdateFilesTimeFile "/etc/autonet/admin/update_files_time"
+#define UpgradeInfoFile "/etc/autonet/admin/upgrade_info"
+#define UpgradedVersionFile "/etc/autonet/admin/upgraded_version"
+#define UsageDir "/etc/autonet/admin/usage"
+#define ShortTermUsageFile "/etc/autonet/admin/usage/shortterm_usage"
+#define ShortTermStarttimeFile "/etc/autonet/admin/usage/shortterm_starttime"
+#define Wlan0UsersFile "/etc/autonet/admin/wifiusers"
+#define ApListFile "/etc/autonet/etc/ap_list"
+#define ConfigFile "ConfigManager"
+#define BadCellTimeFile "/etc/autonet/etc/bad_cell_time"
+#define BuildVarsFile "/etc/autonet/etc/build_vars"
+#define CapabilitiesFile "/etc/autonet/etc/car_capabilities"
+#define PermCellInfoFile "/etc/autonet/etc/cell_info"
+#define ContentBaseFile "/etc/autonet/etc/content_base"
+#define ContentVersionFile "/etc/autonet/etc/content_version"
+#define FeaturesFile "/etc/autonet/etc/features"
+#define GsmConfFile "/etc/autonet/etc/gsm_info"
+#define HostapdConfFile "/etc/autonet/etc/hostapd.conf"
+#define NetworkInterfacesFile "/etc/autonet/etc/interfaces"
+#define LastGpsAntStateFile "/etc/autonet/etc/last_gps_ant_state"
+#define SprintPrlFile "/etc/autonet/etc/latest_retail.prl"
+#define VerizonRetailPrlFile "/etc/autonet/etc/latest_retail.prl"
+#define VerizonWholesalePrlFile "/etc/autonet/etc/latest_wholesale.prl"
+#define LocalFeaturesFile "/etc/autonet/etc/local_features"
+#define MediaVersionsFile "/etc/autonet/etc/media_versions"
+#define OldVinFile "/etc/autonet/etc/old_vin_file"
+#define PrivateKeyFile "/etc/autonet/etc/.secret/private.pem"
+#define PublicKeyFile "/etc/autonet/etc/.secret/public.pem"
+#define ServerKeysFile "/etc/autonet/etc/serverkeys"
+#define SyncConfigFile "/etc/autonet/etc/sync.conf"
+#define UserGsmParmsFile "/etc/autonet/etc/user_gsm_parms"
+#define WhitelistFile "/etc/autonet/etc/whitelist"
+#define WifiPasswdFile "/etc/autonet/etc/wifiadmin.passwd"
+#define VicVersionFile "/etc/autonet/etc/vic_version"
+#define VinFile "/etc/autonet/etc/vin"
+#define WifiConfigFile "/etc/autonet/etc/wifi.conf"
+#define CellModemDevice "/dev/cellmodem"
+#define PowercontrollerDevice "/dev/powercontroller"
+#define EcuTypesFile "/etc/autonet/ecu_types.csv"
+#define IssueFile "/etc/issue"
+#define UnitIdFile "/etc/local/unitID"
+#define SwVersionFile "/etc/local/swVersion"
+#define VinToExtAntFile "/etc/autonet/vin_to_ext_ant"
+#define VinToModelDir "/etc/autonet/vin_to_model"
+#define GsmParmsFile "/etc/ppp/gsm-parms"
+#define ProcCpuinfo "/proc/cpuinfo"
+#define ProcMeminfo "/proc/meminfo"
+#define ProcArpFile "/proc/net/arp"
+#define ProcDevFile "/proc/net/dev"
+#define Wlan0AssocFile "/proc/net/madwifi/wlan0/associated_sta"
+#define ProcNetRoute "/proc/net/route"
+#define ProcPartitions "/proc/partitions"
+#define ProcHostname "/proc/sys/kernel/hostname"
+#define ProcUptime "/proc/uptime"
+#define Ar6102File "/boot/ar6102"
+#define KernelIdFile "/boot/kernel.id"
+#define KernelTestingFile "/boot/kernel.testing"
+#define SingleOsFile "/boot/single_os"
+#define BackupTOCFile "/boot/verify_fs.bak"
+#define TOCFile "/boot/verify_fs.chk"
+#define RoGsmFile "/ro/etc/ppp/GSM"
+#define RoGsmChatFile "/ro/etc/ppp/GSM_chat"
+#define DnsmasqConf "/rw/etc/dnsmasq.conf"
+#define DnsmasqLocalConf "/rw/etc/dnsmasq.conf.local"
+#define DnsmasqLteConf "/rw/etc/dnsmasq.conf.lte"
+#define DnsmasqRemoteConf "/rw/etc/dnsmasq.conf.remote"
+#define RwGsmFile "/rw/etc/ppp/GSM"
+#define RwGsmChatFile "/rw/etc/ppp/GSM_chat"
+#define CommandsDir "/tmp/"
+#define AntennaWrongFile "/tmp/antenna_wrong"
+#define StationListFile "/tmp/associated_sta"
+#define BatteryValFile "/tmp/battery_val"
+#define CanStatusFile "/tmp/can_status"
+#define CantConnectReasonFile "/tmp/cant_connect_reason"
+#define CarControlCommandFile "/tmp/carcontrol_command"
+#define CurrentApsFile "/tmp/current_aps"
+#define TempCellInfoFile "/tmp/cell_info"
+#define CommNeededFile "/tmp/comm_needed"
+#define OtaDownloadWaitingFile "/tmp/downloadMgr.waiting"
+#define OtaInstallWaitingFile "/tmp/installMgr.waiting"
+#define ConnectionReasonFile "/tmp/connection_reason"
+#define DupingFilesystemFile "/tmp/duping_filesystem"
+#define KeepOnReasonFile "/tmp/keepon_reason"
+#define OtaDownloadWaitingFile "/tmp/downloadMgr.waiting"
+#define OtaInstallWaitingFile "/tmp/installMgr.waiting"
+#define RateLimitFile "/tmp/current_ratelimit"
+#define TempStateFile "/tmp/current_state"
+#define DontConnectFile "/tmp/dont_connect"
+#define DowLastLogFile "/tmp/dow_last_log"
+#define EcallFile "/tmp/ecall_in_progress"
+#define EngineFile "/tmp/engine"
+#define EventCountFile "/tmp/event_count"
+#define LoggerPath "/tmp/event_log"
+#define ReaderPath "/tmp/event_reader"
+#define FiletimesFile "/tmp/filetimes"
+#define GpsDistanceFile "/tmp/gps_distance"
+#define GpsLastPositionFile "/tmp/gps_last_position"
+#define GpsPositionFile "/tmp/gps_position"
+#define GpsSpeedFile "/tmp/gps_speed"
+#define GpsPresentFile "/tmp/gps_present"
+#define GpsSpeedFile "/tmp/gps_speed"
+#define RefPositionFile "/tmp/gps_ref_position"
+#define GpsTimeFile "/tmp/gps_time"
+#define HardwareConfFile "/data/hardware.conf"
+#define HasVoiceFile "/tmp/hasVoice"
+#define IgnitionOffFile "/tmp/ignition_off"
+#define MonitorFlagsFile "/tmp/monitor_flags"
+#define LastTimeFile "/tmp/monitor_lasttime"
+#define NoCellCommandsFile "/tmp/no_cell_commands"
+#define NoSmsCommandsFile "/tmp/no_sms_commands"
+#define NoGpsPositionFile "/tmp/no_gps_position"
+#define NoGpsTimeFile "/tmp/no_gps_time"
+#define RapidAccCountFile "/tmp/rapid_acc_count"
+#define RapidDecCountFile "/tmp/rapid_dec_count"
+#define RebootReasonFile "/tmp/reboot_reason"
+#define RemoteStartedFile "/tmp/remote_started"
+#define TempShortTermUsageFile "/tmp/shortterm_usage"
+#define ShutdownFile "/tmp/shutdown"
+#define SupportHoldTimeFile "/tmp/support_hold"
+#define UpgradePathsFile "/tmp/upgradepaths"
+#define WhosKillingMonitorFile "/tmp/whos_killing_monitor"
+#define VicStatusFile "/tmp/vic_status"
+#define CurrentVinFile "/tmp/vin"
+#define WokeOnCanFile "/tmp/woke_on_can"
+#define WpaSupplicantFile "/tmp/wpasupplicant.conf"
+#define ZoneinfoDir "/usr/share/zoneinfo"
+#define CellmodemLockFile "/var/lock/LCK..cellmodem"
+#define PppAllLogFile "/var/log/ppp-all.log"
+#define PppLogFile "/var/log/ppp.log"
+#define CellularStateFile "/var/run/autonet/cellular_state"
+#define CommStateFile "/var/run/autonet/comm_state"
+#define WifiStateFile "/var/run/autonet/wifi_state"
+#define CellTalkerPath "/var/run/cell_talker"
+#define VicTalkerPath "/var/run/vic_talker"
+#define FordConfigFile "/user/ford_config"
+#define UpgradeDir "/user/upgrades"
+#define UpgradeStateFile "/user/upgrades/state"
+#define UpgradeTypeFile "/user/upgrades/type"
+
+#endif

@@ -1,0 +1,118 @@
+ *   Changed timeout for AT$GPSR=n commands
+ *   AK-41: Perform AT+CFUN=1, AT&W when performing reset
+ *   AK-50: Added reset1 that include AT+CFUN=1,AT&@
+    "#GPS_STATUS",
+    setenv("PATH", "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin", 1);
+    string resp = getResponse("AT",1); // Throw away old unsolicited responses
+            resp = getResponse("AT",5);
+        string iccid_resp = getResponse("AT+ICCID",1);
+            string cpin = getResponse("AT+CPIN?",1);
+                (void)getResponse("AT$GPSNMUN=2,1,1,1,1,1,1",1); // Enable NMEA Sentences
+                (void)getResponse("AT$GPSP=1",1); // Start GPS
+                    (void)getResponse("AT$GPSP=0",1); // Start GPS
+    string resp = getResponse("AT");
+    cout << "Response to AT: " << resp << endl;
+    resp = getResponse("AT#DIAGCFG=1");
+    cout << "Response to AT#DIAGCFG=1: " << resp << endl;
+    resp = getResponse("AT");
+    cout << "Response to AT: " << resp << endl;
+    string resp = getResponse("AT#DIAGCFG=0");
+    cout << "Response to AT#DIAGCFG=0: " << resp << endl;
+    resp = getResponse("AT");
+    cout << "Response to AT: " << resp << endl;
+    int fd = open(lockfile.c_str(), O_WRONLY | O_CREAT | O_EXCL, 0);
+    string cgsn = getResponse("AT+CGSN");
+    string cimi = getResponse("AT+CIMI");
+    string omeid = getResponse("AT#MEIDESN?");
+    string mdn_resp = getResponse("AT+CNUM");
+    string msid = getResponse("AT$MSID?");
+    string prl_s = getResponse("AT$PRL?");
+    string cops = getResponse("AT+COPS?");
+        string cpin = getResponse("AT+CPIN?");
+        string cgsn = getResponse("AT+CGSN");
+        string cimi = getResponse("AT+CIMI");
+	string mdn_resp = getResponse("AT+CNUM"); 
+        string cops = getResponse("AT+COPS?");
+    string creg = getResponse("AT+CREG?");
+    string man = getResponse("AT+GMI");
+    string model = getResponse("AT+GMM");
+    string version = getResponse("AT+GMR");
+    string model = getResponse("AT+GMM");
+    string qtemp = getResponse("AT#QTEMP?");
+    string timestr = getResponse("AT+CCLK?");
+    string timestr = getResponse("AT+OCCLK?");
+    string cellpos = getResponse("AT$CELLPOS?");
+    string creg = getResponse("AT+CREG?", 5);
+    string csq = getResponse("AT+CSQ", 5);
+        string hdrps = getResponse("AT#HDRPS?",5);
+    string creg = getResponse("AT+CREG?");
+    string csq = getResponse("AT+CSQ");
+    (void)getResponse("AT+CFUN=1");
+    (void)getResponse("AT&W");
+    string resp = getResponse("AT$RESET", 5);
+    resp = getResponse("AT+CMGF=1");
+    resp = getResponse("AT+CSCS=\"GSM\"");
+    resp = getResponse("AT+CPMS=\"SM\",\"SM\",\"SM\"");
+    resp = getResponse("AT$QCPBMPREF=1");
+    resp = getResponse("AT#NITZ=7,0");
+    resp = getResponse("AT#E2SMSRI?");
+            resp = getResponse("AT#E2SMSRI=1000");
+            resp = getResponse("AT&W");
+            resp = getResponse("AT&P");
+//    resp = getResponse("AT+CFUN?");
+////            resp = getResponse("AT+CFUN=0");
+//            resp = getResponse("AT+CFUN=5");
+//            resp = getResponse("AT&W");
+//            resp = getResponse("AT&P");
+    resp = getResponse("AT+CFUN=1");
+//    string cgdcont = getResponse("AT+CGDCONT?");
+//        resp = getResponse("AT+CGDCONT=1,\"IPV4V6\",\"VZWIMS\"");
+//        resp = getResponse("AT+CGDCONT=2,\"IPV4V6\",\"VZWADMIN\"");
+//        resp = getResponse("AT+CGDCONT=3,\"IPV4V6\",\""+default_apn+"\"");
+//        resp = getResponse("AT+CGDCONT=4,\"IPV4V6\",\"VZWAPP\"");
+//        resp = getResponse("AT+CGDCONT=5,\"IPV4V6\",\"VZW800\"");
+    string resp = getResponse("ATD*22899;", 3);
+    string resp = getResponse("AT!SCACT=1", 5);
+    resp = getResponse("AT!SCACT?1", 4);
+    string resp = getResponse("AT!SCACT=0", 2);
+    string resp = getResponse("AT!SCACT?1", 4);
+//    resp = getResponse("AT+CFUN=0");
+    resp = getResponse("AT+CFUN=5");
+//        resp = getResponse("AT$GPSR=2",3); // Warsmstart
+//    (void)getResponse("AT$GPSR=1",3); // Coldstart
+    string gpsautostart = getResponse("AT+QGPSCFG=\"autogps\"");
+        (void)getResponse("AT+QGPSCFG=\"autogps\",1");
+        (void)getResponse("AT+QGPS=1");
+    resp = getResponse("AT+QGPSEND",3);
+    string resp = getResponse("AT+CMGL=\"ALL\"");
+        resp = getResponse("AT+CMGF=1");
+        resp = getResponse("AT+CMGF=0");
+//        resp = getResponse("AT+CMGS=\""+number+"\",0",">", 1);
+        resp = getResponse("AT+CMGS="+toString(pdu_length), ">", 1);
+        resp = getResponse("AT+CMGF=1");
+        resp = getResponse("AT+CMGS=\""+number+"\"",">", 1);
+    string resp = getResponse("AT+CMGL=\"ALL\"");
+    string resp = getResponse("AT+CMGF=0");
+    resp = getResponse("AT+CMGL=4");
+    resp = getResponse("AT+CMGF=1");
+    string resp = getResponse("AT+CMGR="+idx);
+    string resp = getResponse("AT+CMGF=0");
+    resp = getResponse("AT+CMGR="+idx);
+    resp = getResponse("AT+CMGF=1");
+    resp = getResponse("AT!ENTERCND=\"A710\"", 2);
+        resp = getResponse("AT!MECALLMSDBLK=1,"+id, 2);
+        resp = getResponse("AT!MECALLMSDBLK=2,"+id, 2);
+        //resp = getResponse("AT!MECALLMSDBLK=3,"+cmndstr, 2);
+        resp = getResponse("AT!MECALLMSDBLK=3,\""+toString(val)+"\"", 2);
+        resp = getResponse("AT!MECALLMSDBLK=4,"+vin, 2);
+        //resp = getResponse("AT!MECALLMSDBLK=5,"+cmndstr, 2);
+        resp = getResponse("AT!MECALLMSDBLK=5,\""+toString(val)+"\"", 2);
+        resp = getResponse("AT!MECALLMSDBLK=6,\""+timestamp+"\"", 2);
+        resp = getResponse("AT!MECALLMSDBLK=7,\"" + toString(lat_milliarcseconds) + ":" +toString(lon_milliarcseconds)+"\"", 2);
+        resp = getResponse("AT!MECALLMSDBLK=8,\"" + toString(iDirection) +"\"", 2);
+        resp = getResponse("AT!MECALLCFG=0,0,1,\"" + number + "\",0," +redials+ ",5,8,1", 2);
+        resp = getResponse("AT!MECALL=" + cmndstr, 2);
+    string resp = getResponse("AT+CMGD="+idx);
+    string resp = getResponse("AT+CMGL=\"ALL\"");
+            string cmnd = "AT+CMGD=" + msg;
+        expresp.erase(0,2);	// Get rid of "AT"
